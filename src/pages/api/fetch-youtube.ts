@@ -56,7 +56,7 @@ const cache = new Map<string, YouTubeRSS>();
 // export GET astro api
 export const GET: APIRoute = async () => {
   let video: YouTubeRSSEntry;
-  const channelID = "UCkr-unKyg_SiEzUwUY_uluQ"
+  const channelID = "UCzsGhfwdImeKj2AOoN92hFw"
 
   if (cache.has(channelID)) {
     const rss = cache.get(channelID) as YouTubeRSS;

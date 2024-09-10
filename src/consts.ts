@@ -2,34 +2,33 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 import {
   GithubIcon,
-  DiscordIcon,
   InstagramIcon,
-  TwitchIcon,
+  LinkedinIcon,
   YoutubeIcon,
 } from "@/components/Icons";
 
 export default {
   head: {
     title: "Fernando Papito",
-    description: "Descomplicando a programação WEB!",
-    image: "https://github.com/papito.png",
+    // description: "Descomplicando Automação de Testes!",
+    // image: "https://github.com/papito.png",
   },
   links: {
     primary: [
       {
-        url: "https://www.rocketseat.com.br/eventos/nlw?utm_source=mayk&utm_medium=organic&utm_campaign=lead&utm_term=evento-nlw&utm_content=pagevento-lp_evento_nlw_pocket_inscricao",
-        title: "✨ NLW 17 ✨",
-        description: "Evento gratuito para você construir um projeto em 3 dias.",
+        url: "https://www.cyskills.com.br",
+        title: "✨ Formação Cypress Skills ✨",
+        description: "Faça testes rápidos, eficientes e confiáveis com Cypress e JavaScript!",
         colors: {
-          background: 'bg-gradient-to-br from-[#e254ff] to-[#5f75f2] hover:from-[#9956f6] hover:to-[#29e0a9] ',
+          background: 'bg-gradient-to-br from-[#28D07E] to-[#9CEE69] hover:from-[#9CEE69] hover:to-[#28D07E] ',
           title: 'text-black',
           description: 'text-gray-800'
         }
       },
       {
-        url: "https://one.papito.dev",
-        title: "Rocketseat",
-        description: "Formação completa em programação WEB",
+        url: "https://t.me/fernandopapito",
+        title: "Meu canal no Telegram",
+        description: "Conecte-se para insights e oportunidades como QA",
       },
       {
         url: "https://discover.papito.dev",
@@ -38,40 +37,35 @@ export default {
       },
       {
         url: "https://masterclassjs.papito.dev",
-        title: "Quiz JavaScript",
-        description: "Teste seus conhecimentos em JavaScript",
+        title: "Quiz Cypress",
+        description: "Teste seus conhecimentos em automação de testes com Cypress",
       },
       {
         url: "https://biblioteca.papito.dev",
-        title: "+20 Cursos (gratuitos)",
-        description: "Cursos de HTML, CSS, JS, Node, SQL, etc...",
+        title: "+20 Cursos na Udemy",
+        description: "Cursos de Cypress, Playwright, Robot Framework, TestOps e muito mais...",
       },
     ],
     social: [
       {
-        url: "https://github.com/papito",
-        title: "Github",
-        icon: GithubIcon,
+        url: "https://www.linkedin.com/in/papitodev/",
+        title: "LinkedIn",
+        icon: LinkedinIcon,
       },
       {
-        url: "https://twitch.tv/papito",
-        title: "Twitch",
-        icon: TwitchIcon,
-      },
-      {
-        url: "https://youtube.com/papito",
+        url: "https://youtube.com/@papitodev",
         title: "Youtube",
         icon: YoutubeIcon,
       },
       {
-        url: "https://discord.papito.dev",
-        title: "Discord",
-        icon: DiscordIcon,
-      },
-      {
-        url: "https://instagram.com/papito",
+        url: "https://instagram.com/papitodev",
         title: "Instagram",
         icon: InstagramIcon,
+      },
+      {
+        url: "https://github.com/papitodev",
+        title: "Github",
+        icon: GithubIcon,
       },
     ],
   },
