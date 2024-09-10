@@ -22,7 +22,7 @@ export default {
         colors: {
           background: 'bg-gradient-to-br from-[#28D07E] to-[#9CEE69] hover:from-[#9CEE69] hover:to-[#28D07E] ',
           title: 'text-black',
-          description: 'text-gray-800'
+          description: 'text-zinc-800'
         }
       },
       {

@@ -24,10 +24,10 @@
     {#if !thumbnail }
         <div
           id="placeholder"
-          class="animate-pulse flex items-center justify-center h-[288px] bg-gray-300 rounded w-[512px] dark:bg-gray-700"
+          class="animate-pulse flex items-center justify-center h-[288px] bg-zinc-300 rounded w-[512px] dark:bg-zinc-700"
         >
           <svg
-            class="w-10 h-10 text-gray-200 dark:text-gray-600"
+            class="w-10 h-10 text-zinc-200 dark:text-zinc-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -38,12 +38,12 @@
         </div>
 
         <div role="status" class="max-w-sm animate-pulse">
-          <div class="mt-4 h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-96"></div>
-          <div class="mt-2 h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+          <div class="mt-4 h-4 bg-zinc-200 rounded-full dark:bg-zinc-700 w-96"></div>
+          <div class="mt-2 h-4 bg-zinc-200 rounded-full dark:bg-zinc-700 w-48"></div>
           <div class="mt-2 grid grid-flow-col max-w-[140px]">
-            <div class="h-3.5 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[40px]"></div>
-            <div class="h-3.5 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[40px]"></div>
-            <div class="h-3.5 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[40px]"></div>
+            <div class="h-3.5 bg-zinc-200 rounded-full dark:bg-zinc-700 max-w-[40px]"></div>
+            <div class="h-3.5 bg-zinc-200 rounded-full dark:bg-zinc-700 max-w-[40px]"></div>
+            <div class="h-3.5 bg-zinc-200 rounded-full dark:bg-zinc-700 max-w-[40px]"></div>
           </div>
           <span class="sr-only">Loading...</span>
         </div>

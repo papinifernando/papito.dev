@@ -1,6 +1,5 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import { ModeToggle } from "@/components/ModeToogle";
 
 import '@/styles/globals.css';
 
@@ -56,10 +55,9 @@ const { title, description, image="/me.png" } = Astro.props;
        gtag('config', 'G-s');
      </script>
   </head>
-  <body style="overflow-y:scroll">
+  <body style="overflow-y:scroll" class="bg-zinc-900">
    
     <div class="page">  
-      <ModeToggle className="top-6 right-6 absolute" client:only="react" />
       <slot/>
     </div>
   </body>

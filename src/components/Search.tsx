@@ -28,7 +28,7 @@ export default function Search({ searchList }: any) {
     <>
       <label htmlFor="search" className='sr-only'>Search</label>
       <input 
-        className='block w-full p-4 pl-6 text-gray-900 border border-gray-300 dark:border-gray-800 rounded bg-gray-50 dark:bg-gray-950 dark:text-gray-100'
+        className='block w-full p-4 pl-6 text-zinc-900 border border-zinc-300 dark:border-zinc-800 rounded bg-zinc-50 dark:bg-zinc-950 dark:text-zinc-100'
         type="text" 
         id="search"
         value={query} 

@@ -33,7 +33,7 @@ const { links } = config;
           links.primary.map(async (link) => (
             <a
               class={cn(
-                `border rounded border-gray-300 p-4 hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-800`,
+                `border rounded border-zinc-300 p-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:border-zinc-800`,
                 link.colors?.background
               )}
               href={link.url}
@@ -53,7 +53,7 @@ const { links } = config;
       <footer class="flex flex-wrap gap-2 justify-center mb-20">
         {
           links.social.map((link) => (
-            <a class="border rounded-md p-3" href={link.url} target="_blank">
+            <a class="border border-zinc-800  00 rounded-md p-3 hover:bg-green-600" href={link.url} target="_blank">
               <link.icon strokeWidth={1} />
               <p class="sr-only">{link.title}</p>
             </a>
