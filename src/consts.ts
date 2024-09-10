@@ -26,14 +26,14 @@ export default {
         }
       },
       {
+        url: "https://escola.papito.dev",
+        title: "Papito QA School",
+        description: "Aprenda automação de testes e qualidade de software.",
+      },
+      {
         url: "https://t.me/fernandopapito",
         title: "Meu canal no Telegram",
         description: "Conecte-se para insights e oportunidades como QA",
-      },
-      {
-        url: "https://discover.papito.dev",
-        title: "Discover (gratuito)",
-        description: "+5h de curso de programação WEB para iniciantes",
       },
       {
         url: "https://masterclassjs.papito.dev",
