@@ -12,19 +12,15 @@ export default function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-      <NavigationMenuItem>
-            <NavigationMenuLink href="/" active={isActive("/")} className={navigationMenuTriggerStyle()}>
-              Home
-            </NavigationMenuLink>
+        <NavigationMenuItem>
+          <NavigationMenuLink href="/" active={isActive("/")} className={navigationMenuTriggerStyle()}>
+            Home
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-            <NavigationMenuLink href="/blog/" active={isActive("/blog/")} className={navigationMenuTriggerStyle()}>
-              Blog
-            </NavigationMenuLink>
-        </NavigationMenuItem><NavigationMenuItem>
-            <NavigationMenuLink href="/setup/" active={isActive("/setup/")} className={navigationMenuTriggerStyle()}>
-              Setup
-            </NavigationMenuLink>
+          <NavigationMenuLink href="/setup/" active={isActive("/setup/")} className={navigationMenuTriggerStyle()}>
+            Setup
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
