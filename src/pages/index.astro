@@ -13,7 +13,7 @@ const { links } = config;
   description={config.head.description}
   image={config.head.image}
 >
-  <div class="page max-w-xs mx-auto px-2 md:px-0 antialiased">
+  <div class="page max-w-lg mx-auto px-2 md:px-0 antialiased">
     <Header />
 
     <div class="grid gap-12">
@@ -33,7 +33,7 @@ const { links } = config;
           links.primary.map(async (link) => (
             <a
               class={cn(
-                `border rounded border-zinc-300 p-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:border-zinc-800`,
+                `border rounded border-zinc-300 p-4 hover:bg-zinc-100 hover:bg-zinc-800 border-zinc-800`,
                 link.colors?.background
               )}
               href={link.url}

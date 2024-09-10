@@ -22,7 +22,7 @@ export default function Posts({ ...props }) {
                 .join(" ")
             }
           >
-            <article className="transform rounded-lg border border-zinc-200 bg-white shadow-md transition duration-100 ease-in dark:border-zinc-700 dark:bg-zinc-950 sm:hover:scale-[102%] lg:hover:scale-105">
+            <article className="transform rounded-lg border border-zinc-200 bg-white shadow-md transition duration-100 ease-in border-zinc-700 bg-zinc-950 sm:hover:scale-[102%] lg:hover:scale-105">
               <div
                 style={{
                   viewTransitionName: `cover-image-${post.frontmatter.id}`,
@@ -43,16 +43,16 @@ export default function Posts({ ...props }) {
                   viewTransitionName: `cover-title-${post.frontmatter.id}`,
                 }}
               >
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                <h2 className="mb-2 text-2xl font-bold tracking-tight text-zinc-900 text-white">
                   {post.frontmatter.title}
                 </h2>
 
-                <p className="mb-4 whitespace-pre-line font-light text-zinc-500 dark:text-zinc-400">
+                <p className="mb-4 whitespace-pre-line font-light text-zinc-500 text-zinc-400">
                   {post.frontmatter.description}
                 </p>
 
                 <div className="flex justify-between align-center">
-                  <small className="text-zinc-500 dark:text-zinc-500">
+                  <small className="text-zinc-500 text-zinc-500">
                     {post.frontmatter.dateStr} - {post.frontmatter.reading_time}
                   </small>
                   <div className="tags">

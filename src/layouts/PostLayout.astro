@@ -60,9 +60,9 @@ const dateStr = new Date(
   <main class="pt-8 antialiased lg:pt-16 mb-20">
     <div class={`mx-auto flex ${Astro.props.headings.length == 0 ? 'max-w-4xl' : 'max-w-screen-xl'} justify-center gap-12 px-4`}>
       <article
-        class={`w-full format format-sm sm:format-base lg:format-lg format-blue dark:format-invert overflow-x-hidden ${
+        class={`w-full format format-sm sm:format-base lg:format-lg format-blue format-invert overflow-x-hidden ${
           frontmatter.cover ? "lg:my-[-128px]" : ""
-        } bg-white dark:bg-zinc-950 rounded-lg md:border lg:shadow-4xl lg:-mb-8 md:py-12 md:px-20
+        } bg-white bg-zinc-950 rounded-lg md:border lg:shadow-4xl lg:-mb-8 md:py-12 md:px-20
             `}
         transition:name={`cover-title-${frontmatter.id}`}
         style={`view-transition-name: cover-title-${frontmatter.id}`}
@@ -70,7 +70,7 @@ const dateStr = new Date(
         <header class="not-format mb-4 lg:mb-6">
           <address class="mb-6 flex items-center not-italic">
             <div
-              class="mr-3 inline-flex items-center text-sm text-zinc-900 dark:text-white"
+              class="mr-3 inline-flex items-center text-sm text-zinc-900 text-white"
             >
               <img
                 class="mr-4 h-16 w-16 rounded-full"
@@ -83,14 +83,14 @@ const dateStr = new Date(
                     <a
                       href="#"
                       rel="author"
-                      class="text-xl font-bold text-zinc-900 dark:text-white"
+                      class="text-xl font-bold text-zinc-900 text-white"
                     >
                       Fernando Papito
                     </a>
-                    <p class="text-base text-zinc-500 dark:text-zinc-400">
+                    <p class="text-base text-zinc-500 text-zinc-400">
                       QA Lead & SDET
                     </p>
-                    <p class="text-base text-zinc-500 dark:text-zinc-400">
+                    <p class="text-base text-zinc-500 text-zinc-400">
                       <time datetime={frontmatter.created_time} title={dateStr}>
                         {dateStr}
                       </time>
@@ -101,11 +101,11 @@ const dateStr = new Date(
                     <a
                       href="#"
                       rel="author"
-                      class="text-2xl font-bold text-zinc-900 dark:text-white"
+                      class="text-2xl font-bold text-zinc-900 text-white"
                     >
                       Fernando Papito
                     </a>
-                    <p class="text-lg text-zinc-500 dark:text-zinc-400">
+                    <p class="text-lg text-zinc-500 text-zinc-400">
                       <time datetime={frontmatter.created_time} title={dateStr}>
                         {dateStr}
                       </time>
@@ -117,7 +117,7 @@ const dateStr = new Date(
           </address>
 
           <div
-            class="mb-4 text-4xl font-extrabold leading-tight text-zinc-900 dark:text-white sm:text-[2.66rem] lg:mb-6 lg:text-[3.33rem]"
+            class="mb-4 text-4xl font-extrabold leading-tight text-zinc-900 text-white sm:text-[2.66rem] lg:mb-6 lg:text-[3.33rem]"
           >
             {frontmatter.title}
           </div>
@@ -128,14 +128,14 @@ const dateStr = new Date(
         <div
           class={`
           blog-content
-          prose md:prose-md lg:prose-lg xl:prose-xl dark:prose-invert 
+          prose md:prose-md lg:prose-lg xl:prose-xl prose-invert 
           prose-a:text-orange-400
-          dark:prose-a:text-yellow-500
-          dark:hover:prose-a:text-yellow-300
+          prose-a:text-yellow-500
+          hover:prose-a:text-yellow-300
           prose-img:rounded-xl 
           prose-code:font-normal
           prose-code:text-orange-500 
-          dark:prose-code:text-yellow-400
+          prose-code:text-yellow-400
           prose-pre:my-1 
           `}
         >
