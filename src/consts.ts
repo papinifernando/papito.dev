@@ -36,12 +36,12 @@ export default {
         description: "Conecte-se para insights e oportunidades como QA",
       },
       {
-        url: "https://masterclassjs.papito.dev",
+        url: "https://quiz.papito.dev",
         title: "Quiz Cypress",
         description: "Teste seus conhecimentos em automação de testes com Cypress",
       },
       {
-        url: "https://biblioteca.papito.dev",
+        url: "https://www.udemy.com/user/fernando-papito/",
         title: "+20 Cursos na Udemy",
         description: "Cursos de Cypress, Playwright, Robot Framework, TestOps e muito mais...",
       },
