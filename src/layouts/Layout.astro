@@ -42,17 +42,17 @@ const { title, description, image="/papito.png" } = Astro.props;
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    <meta property="twitter:image" content={new URL("/banner.png", Astro.url)} />
     <ViewTransitions />
 
      <!-- Google tag (gtag.js) -->
-     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-d"></script>
+     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=GTM-M43FRG22"></script>
      <script is:inline>
        window.dataLayer = window.dataLayer || [];
        function gtag(){window.dataLayer.push(arguments);}
        gtag('js', new Date());
  
-       gtag('config', 'G-s');
+       gtag('config', 'GTM-M43FRG22');
      </script>
   </head>
   <body style="overflow-y:scroll" class="bg-zinc-900 text-zinc-400">
