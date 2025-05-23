@@ -1,5 +1,3 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
 import {
   GithubIcon,
   InstagramIcon,
@@ -10,8 +8,8 @@ import {
 export default {
   head: {
     title: "Fernando Papito",
-    // description: "Descomplicando Automação de Testes!",
-    // image: "https://github.com/papito.png",
+    description: "Descomplicando Automação de Testes!",
+    image: "https://github.com/papito.png",
   },
   links: {
     primary: [
@@ -69,27 +67,4 @@ export default {
       },
     ],
   },
-} as {
-  head: {
-    title: string;
-    description: string;
-    image: string;
-  };
-  links: {
-    primary: {
-      url: string;
-      title: string;
-      description: string;
-      colors?: {
-        title?: string;
-        description?: string;
-        background?: string;
-      };
-    }[];
-    social: {
-      url: string;
-      title: string;
-      icon: any;
-    }[];
-  };
-};
+} as const;

@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom'
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -6,8 +7,9 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-export default function NavigationMenuDemo() {
-  const isActive = (path: string) => location.pathname == path
+export default function Menu() {
+  const location = useLocation()
+  const isActive = (path: string) => location.pathname === path
 
   return (
     <NavigationMenu>
@@ -18,7 +20,7 @@ export default function NavigationMenuDemo() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink href="/setup/" active={isActive("/setup/")} className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink href="/setup" active={isActive("/setup")} className={navigationMenuTriggerStyle()}>
             Setup
           </NavigationMenuLink>
         </NavigationMenuItem>
