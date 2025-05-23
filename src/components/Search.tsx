@@ -1,46 +1,43 @@
-import Fuse from 'fuse.js'
 import { useState } from 'react'
+import Fuse from 'fuse.js'
 
-// Configs fuse.js
-// https://fusejs.io/api/options.html
 const options = {
-	keys: ['frontmatter.title', 'fontmatter.description', 'frontmatter.slug'],
-	includeMatches: true,
-	minMatchCharLength: 2,
+  keys: ['frontmatter.title', 'frontmatter.description', 'frontmatter.slug'],
+  includeMatches: true,
+  minMatchCharLength: 2,
 };
 
-export default function Search({ searchList }: any) {
+interface SearchProps {
+  searchList: any[];
+}
+
+export default function Search({ searchList }: SearchProps) {
   const [query, setQuery] = useState('')
-
   const fuse = new Fuse(searchList, options)
-
   const posts = fuse
     .search(query)
     .map(result => result.item)
     .slice(0, 5)
 
-  function handleOnSearch(event: React.ChangeEvent<HTMLInputElement>) {
-    const { value } = event.target
-    setQuery(() => value)
-  }
-
   return (
     <>
       <label htmlFor="search" className='sr-only'>Search</label>
       <input 
-        className='block w-full p-4 pl-6 text-zinc-900 border border-zinc-300 border-zinc-800 rounded bg-zinc-50 bg-zinc-950 text-zinc-100'
+        className='block w-full p-4 pl-6 text-zinc-900 border border-zinc-800 rounded bg-zinc-950 text-zinc-100'
         type="text" 
         id="search"
         value={query} 
-        onChange={handleOnSearch} placeholder='Search posts' />
+        onChange={(e) => setQuery(e.target.value)} 
+        placeholder='Search posts' 
+      />
       {query.length > 1 && (
         <p className='my-4'>
-          Found {posts.length} {posts.length === 1 ? 'result' : 'results'} para '{query}'
+          Found {posts.length} {posts.length === 1 ? 'result' : 'results'} for '{query}'
         </p>
       )}
 
       <ul className='list-none'>
-        {posts && posts.map((post:any) => (
+        {posts.map((post: any) => (
           <li className='py-2' key={post.frontmatter.slug}>
             <a href={`/blog/${post.frontmatter.slug}`}>{post.frontmatter.title}</a>
             <p className="text-sm text-muted-foreground">{post.frontmatter.description}</p>
