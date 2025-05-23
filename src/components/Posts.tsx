@@ -1,58 +1,61 @@
 import { useState } from "react";
-import { Button } from "./ui/button";
-import type { Post } from "@/lib/types";
 import Tags from "./Tags";
 
-export default function Posts({ ...props }) {
-  const posts = props.posts;
-  let showItems = 3;
+interface Post {
+  frontmatter: {
+    id: string;
+    slug: string;
+    title: string;
+    description: string;
+    tags: Array<{ name: string; color: string; }>;
+    dateStr: string;
+    reading_time: string;
+    coverImageSrc?: string;
+  }
+}
+
+interface PostsProps {
+  posts: Post[];
+}
+
+export default function Posts({ posts }: PostsProps) {
+  const showItems = 3;
   const [currentItems, setCurrentItems] = useState(showItems);
 
   return (
     <>
       {posts.length > 0 &&
-        posts.slice(0, currentItems).map((post: Post) => (
+        posts.slice(0, currentItems).map((post) => (
           <a
             key={post.frontmatter.id}
             href={`/blog/${post.frontmatter.slug}`}
             className={
               "post-link-container block mb-4 " +
               post.frontmatter.tags
-                .map((tag: { id: string }) => `post-link-tag-${tag.id}`)
+                .map((tag) => `post-link-tag-${tag.name}`)
                 .join(" ")
             }
           >
-            <article className="transform rounded-lg border border-zinc-200 bg-white shadow-md transition duration-100 ease-in border-zinc-700 bg-zinc-950 sm:hover:scale-[102%] lg:hover:scale-105">
-              <div
-                style={{
-                  viewTransitionName: `cover-image-${post.frontmatter.id}`,
-                }}
-              >
-                {post.frontmatter.optimizedCoverImage && (
-                  <img
-                    className={`mb-1 h-auto w-full rounded-md rounded-b-none object-cover`}
-                    style={{ aspectRatio: "4/1" }}
-                    src={post.frontmatter.coverImageSrc}
-                    alt="cover"
-                  />
-                )}
-              </div>
-              <div
-                className="p-4"
-                style={{
-                  viewTransitionName: `cover-title-${post.frontmatter.id}`,
-                }}
-              >
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-zinc-900 text-white">
+            <article className="transform rounded-lg border border-zinc-700 bg-zinc-950 shadow-md transition duration-100 ease-in sm:hover:scale-[102%] lg:hover:scale-105">
+              {post.frontmatter.coverImageSrc && (
+                <img
+                  className="mb-1 h-auto w-full rounded-md rounded-b-none object-cover"
+                  style={{ aspectRatio: "4/1" }}
+                  src={post.frontmatter.coverImageSrc}
+                  alt="cover"
+                />
+              )}
+              <div className="p-4">
+                <h2 className="mb-2 text-2xl font-bold tracking-tight text-white">
                   {post.frontmatter.title}
                 </h2>
 
-                <p className="mb-4 whitespace-pre-line font-light text-zinc-500 text-zinc-400">
+                <p className="mb-4 whitespace-pre-line font-light text-zinc-400">
                   {post.frontmatter.description}
                 </p>
 
                 <div className="flex justify-between align-center">
-                  <small className="text-zinc-500 text-zinc-500">
+                  <small className="text-zinc-500">
                     {post.frontmatter.dateStr} - {post.frontmatter.reading_time}
                   </small>
                   <div className="tags">
@@ -65,13 +68,12 @@ export default function Posts({ ...props }) {
         ))}
 
       {currentItems < posts.length && (
-        <Button
-          className="w-full"
-          variant="outline"
-          onClick={() => setCurrentItems(() => currentItems + showItems)}
+        <button
+          className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10"
+          onClick={() => setCurrentItems(currentItems + showItems)}
         >
           Load More
-        </Button>
+        </button>
       )}
     </>
   );
