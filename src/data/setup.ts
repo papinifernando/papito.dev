@@ -47,4 +47,4 @@ export default [
       "https://m.media-amazon.com/images/I/416HU5Bo8pL._AC_SX679_.jpg",
     url: "#",
   }
-];
+]
